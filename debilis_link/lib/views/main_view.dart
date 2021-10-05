@@ -1,3 +1,4 @@
+import 'package:debilis_link/widgets/features_panel.dart';
 import 'package:debilis_link/widgets/footer.dart';
 import 'package:debilis_link/widgets/main_hero.dart';
 import 'package:debilis_link/widgets/navigation_bar.dart';
@@ -32,11 +33,7 @@ class _MainViewState extends State<MainView> {
                 NavigationBar(scrollController: scrollController),
                 const MainHero(),
                 const Divider(height: 1),
-                Container(
-                  height: MediaQuery.of(context).size.height,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.grey,
-                ),
+                const FeaturesPanel(),
                 const Divider(height: 1),
                 Container(
                   height: MediaQuery.of(context).size.height,

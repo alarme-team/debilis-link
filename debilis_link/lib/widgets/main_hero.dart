@@ -21,7 +21,7 @@ class MainHero extends StatelessWidget {
                 _AnalyticsCard(),
                 Expanded(
                   child: Text(
-                    "Second panel\nplace gif here",
+                    "Second panel\nplace gif here\n ¯\\_(ツ)_/¯",
                     textAlign: TextAlign.center,
                   ),
                 ),
