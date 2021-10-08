@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
+import 'basic.dart';
+
 class LineChart extends StatefulWidget {
   const LineChart({Key? key, required this.data}) : super(key: key);
   final List<TwoArgsData> data;
@@ -65,11 +67,4 @@ class _LineChartState extends State<LineChart> {
       ),
     );
   }
-}
-
-class TwoArgsData {
-  TwoArgsData(this.x, this.y);
-
-  String x;
-  int y;
 }

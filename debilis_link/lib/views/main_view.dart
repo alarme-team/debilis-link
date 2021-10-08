@@ -1,3 +1,5 @@
+import 'package:debilis_link/widgets/Charts/basic.dart';
+import 'package:debilis_link/widgets/Charts/line_chart.dart';
 import 'package:debilis_link/widgets/features_panel.dart';
 import 'package:debilis_link/widgets/footer.dart';
 import 'package:debilis_link/widgets/main_hero.dart';
@@ -14,10 +16,20 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   late ScrollController scrollController;
+  bool _showBackToTopButton = false;
 
   @override
   void initState() {
-    scrollController = ScrollController();
+    scrollController = ScrollController()
+      ..addListener(() {
+        setState(() {
+          if (scrollController.offset >= 500) {
+            _showBackToTopButton = true; // show
+          } else {
+            _showBackToTopButton = false; // hide
+          }
+        });
+      });
     super.initState();
   }
 
@@ -46,6 +58,23 @@ class _MainViewState extends State<MainView> {
           ),
         ],
       ),
+      floatingActionButton: !_showBackToTopButton
+          ? null
+          : FloatingActionButton(
+              onPressed: scrollToTop,
+              child: const Icon(
+                Icons.arrow_upward,
+                color: Colors.black,
+              ),
+            ),
+    );
+  }
+
+  void scrollToTop() {
+    scrollController.animateTo(
+      scrollController.position.minScrollExtent,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.ease,
     );
   }
 }

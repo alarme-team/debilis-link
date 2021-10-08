@@ -27,10 +27,15 @@ class _NavigationBarState extends State<NavigationBar> {
             ],
           ),
           Row(
-            children: const [
-              _NavBarItem("Features", null),
-              SizedBox(width: 40),
-              _NavBarItem("Sign in", null),
+            children: [
+              _NavBarItem("Features", () {
+                widget.scrollController.animateTo(
+                    widget.scrollController.position.maxScrollExtent / 2 - 5,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.ease);
+              }),
+              const SizedBox(width: 40),
+              const _NavBarItem("Sign in", null),
             ],
           ),
         ],
@@ -52,6 +57,7 @@ class _NavBarItem extends StatelessWidget {
       child: Text(
         title,
         style: const TextStyle(
+          color: Colors.black,
           fontSize: 24,
         ),
       ),

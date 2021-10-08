@@ -13,20 +13,23 @@ class Footer extends StatelessWidget {
         children: [
           const Divider(),
           const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "© 2021 dl-team",
-                style: TextStyle(
-                  fontSize: 24,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "© 2021 dl-team",
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
                 ),
-              ),
-              Icon(
-                LineIcons.values['code'],
-                size: 36,
-              )
-            ],
+                Icon(
+                  LineIcons.values['code'],
+                  size: 36,
+                )
+              ],
+            ),
           ),
         ],
       ),

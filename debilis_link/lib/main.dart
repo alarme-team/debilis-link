@@ -11,9 +11,13 @@ class DebilisLink extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          backgroundColor: Colors.white,
-          scaffoldBackgroundColor: Colors.white,
-          fontFamily: "Roboto"),
+        backgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: "Roboto",
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.grey[300],
+        ),
+      ),
       home: const MainView(),
     );
   }

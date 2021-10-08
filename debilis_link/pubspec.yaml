@@ -32,15 +32,15 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: fonts/Roboto-regular.ttf
-        - asset: fonts/Roboto-Thin.ttf
+        - asset: fonts\Roboto-regular.ttf
+        - asset: fonts\Roboto-Thin.ttf
     - family: RobotoMono
       fonts:
-        - asset: fonts/RobotoMono.ttf
-        - asset: fonts/RobotoMono-Italic.ttf
+        - asset: fonts\RobotoMono.ttf
+        - asset: fonts\RobotoMono-Italic.ttf
     - family: NotoSansDisplay
       fonts:
-        - asset: fonts/NotoSansDisplay.ttf
+        - asset: fonts\NotoSansDisplay.ttf
 
   uses-material-design: true
 
